@@ -8,6 +8,9 @@ export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState({ loading: false, success: null, message: '' });
 
+  // Use the environment variable from Vite, defaulting to localhost if not found
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -17,7 +20,8 @@ export default function Contact() {
     setStatus({ loading: true, success: null, message: '' });
 
     try {
-      const res = await axios.post('http://localhost:5000/api/contact', formData);
+      // UPDATED: Now uses the dynamic base URL
+      const res = await axios.post(`${API_BASE_URL}/api/contact`, formData);
       setStatus({ loading: false, success: true, message: res.data.message });
       setFormData({ name: '', email: '', message: '' }); // Clear form
     } catch (error) {
