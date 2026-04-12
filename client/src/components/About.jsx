@@ -2,10 +2,12 @@ import { motion } from 'framer-motion';
 import { FaMapMarkerAlt, FaUserGraduate, FaFilePdf, FaFileWord } from 'react-icons/fa';
 
 export default function About() {
+  // Use the environment variable from Vite, defaulting to localhost if not found
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
   
-  // Triggers the backend download route
+  // Triggers the backend download route using the dynamic URL
   const handleDownload = (format) => {
-    window.open(`http://localhost:5000/api/cv/download/${format}`, '_blank');
+    window.open(`${API_BASE_URL}/api/cv/download/${format}`, '_blank');
   };
 
   return (
@@ -27,10 +29,9 @@ export default function About() {
           border-b-4 md:border-b-0 md:border-r-4 border-black dark:border-white 
           bg-gray-100 dark:bg-black transition-colors duration-300"
         >
-          {/* Apply the grayscale/contrast filter directly to your photo for that magazine look */}
           <div className="w-full max-w-[280px] aspect-square overflow-hidden border-4 border-black dark:border-white bg-white">
             <img 
-              src="/your-real-photo.png" // Replace with your actual photo in the public folder
+              src="https://via.placeholder.com/400x400/000000/FFFFFF?text=Nidhesh" 
               alt="Nidhesh Soni Profile" 
               className="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-500" 
             />
