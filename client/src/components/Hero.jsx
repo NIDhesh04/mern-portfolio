@@ -88,11 +88,14 @@ export default function Hero() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.3 }}
       >
-        <img 
-          src={myImage} 
-  alt="Nidhesh Soni Illustration" 
-  className="w-full h-auto object-contain dark:gray transition-all duration-300"
-/>
+        {/* Removed padding, borders, and shadows! Now it just tightly hugs your SVG */}
+        <div className="w-full bg-white transition-colors duration-300 flex justify-center items-center">
+          <img 
+            src={myImage} 
+            alt="Nidhesh Soni Illustration" 
+            className="w-full h-auto object-contain"
+          />
+        </div>
       </motion.div>
     </section>
   );

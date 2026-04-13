@@ -3,8 +3,8 @@
 A high-performance, minimalist, and brutalist-inspired personal portfolio built with the MERN stack (**MongoDB, Express, React, Node.js**). This project features a custom dark mode, responsive design, a backend-driven contact system, and dynamic asset filtering.
 
 ## 🚀 Live Demo
-- **Frontend:** [Your Vercel URL Here]
-- **Backend:** [Your Render URL Here]
+- **Frontend:** https://mern-portfolio-cyan.vercel.app/
+- **Backend:** https://mern-portfolio-ovm1.onrender.com
 
 ## 🛠️ Tech Stack
 
