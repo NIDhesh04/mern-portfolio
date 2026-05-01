@@ -1,6 +1,6 @@
 // client/src/components/Hero.jsx
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaEnvelope } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
 import myImage from "../assets/Gemini_Generated_Image_ks87bqks87bqks87.svg";
 
@@ -77,6 +77,16 @@ export default function Hero() {
             dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black"
           >
             <FaLinkedinIn size={20} />
+          </a>
+
+          {/* Outline Icon - Email */}
+          <a 
+            href="mailto:nidheshsoni@gmail.com" 
+            className="w-12 h-12 flex justify-center items-center rounded transition-colors duration-300 
+            border-2 border-black text-black hover:bg-black hover:text-white 
+            dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black"
+          >
+            <FaEnvelope size={20} />
           </a>
           
           {/* Outline Icon - LeetCode */}

@@ -1,5 +1,5 @@
 // client/src/components/Footer.jsx
-import { FaLinkedinIn, FaGithub, FaArrowUp } from 'react-icons/fa';
+import { FaLinkedinIn, FaGithub, FaArrowUp, FaEnvelope } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
 
 export default function Footer() {
@@ -41,6 +41,13 @@ export default function Footer() {
             className="w-10 h-10 flex justify-center items-center rounded border-2 border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-300"
           >
             <FaLinkedinIn size={18} />
+          </a>
+          {/* Email Icon Added Here */}
+          <a 
+            href="mailto:nidheshsoni@gmail.com" 
+            className="w-10 h-10 flex justify-center items-center rounded border-2 border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-300"
+          >
+            <FaEnvelope size={18} />
           </a>
           <a 
             href="https://leetcode.com/u/nidheshsoni/" 
