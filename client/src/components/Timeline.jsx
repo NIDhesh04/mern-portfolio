@@ -34,27 +34,19 @@ const AcademyIllustration = () => (
 // --- 2. Timeline Data ---
 const timelineData = [
   {
-    id: 1,
-    type: 'experience',
-    year: '2025 - Present',
-    title: 'Full-Stack Developer Intern',
-    institution: 'Tech Innovators Inc.',
-    description: 'Developed and maintained RESTful APIs using Node.js and Express. Integrated MongoDB for data storage and built responsive React components for the user dashboard.',
-  },
-  {
     id: 2,
     type: 'education',
-    year: '2022 - 2026',
+    year: '2023 - 2027',
     title: 'B.Tech in Computer Science',
-    institution: 'University of Engineering',
-    description: 'Core coursework in Data Structures, Algorithms, Web Development, and Database Management Systems. CGPA: 8.5/10.',
+    institution: 'JK Lakshmipat University',
+    description: 'Core coursework in Data Structures, Algorithms, Web Development, Machine Learning, Deep Learning, Computer Vision',
   },
   {
     id: 3,
     type: 'experience',
-    year: 'Summer 2024',
-    title: 'Frontend Web Developer',
-    institution: 'Freelance',
+    year: 'Summer 2025',
+    title: 'Full-Stack Developer Intern',
+    institution: 'LMNIIT Jaipur',
     description: 'Designed and deployed 3 high-converting landing pages for local businesses using React and Tailwind CSS, increasing their client acquisition by 20%.',
   },
   {
@@ -62,8 +54,8 @@ const timelineData = [
     type: 'education',
     year: '2020 - 2022',
     title: 'Higher Secondary Education',
-    institution: 'City Public School',
-    description: 'Specialized in Physics, Chemistry, and Mathematics. Graduated with 92% aggregate.',
+    institution: 'Sanskar School',
+    description: 'Specialized in Physics, Chemistry, and Mathematics. Graduated with 77% aggregate',
   }
 ];
 

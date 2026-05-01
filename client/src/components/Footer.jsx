@@ -1,5 +1,6 @@
 // client/src/components/Footer.jsx
-import { FaLinkedinIn, FaGithub, FaTwitter, FaArrowUp } from 'react-icons/fa';
+import { FaLinkedinIn, FaGithub, FaArrowUp } from 'react-icons/fa';
+import { SiLeetcode } from 'react-icons/si';
 
 export default function Footer() {
   
@@ -10,7 +11,8 @@ export default function Footer() {
 
   return (
     <footer className="w-full bg-white dark:bg-gray-900 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-8">
+      {/* Added a thick top border to separate the footer brutally from the main content */}
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-8 border-t-4 border-black dark:border-white">
         
         {/* Left Side: Brand & Copyright */}
         <div className="flex flex-col items-center md:items-start">
@@ -24,14 +26,29 @@ export default function Footer() {
 
         {/* Center: Social Icons */}
         <div className="flex space-x-4">
-          <a href="#" className="w-10 h-10 flex justify-center items-center rounded border-2 border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-300">
+          <a 
+            href="https://github.com/NIDhesh04" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-10 h-10 flex justify-center items-center rounded border-2 border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-300"
+          >
             <FaGithub size={18} />
           </a>
-          <a href="#" className="w-10 h-10 flex justify-center items-center rounded border-2 border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-300">
+          <a 
+            href="https://www.linkedin.com/in/nidhesh-soni-27b80622b/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-10 h-10 flex justify-center items-center rounded border-2 border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-300"
+          >
             <FaLinkedinIn size={18} />
           </a>
-          <a href="#" className="w-10 h-10 flex justify-center items-center rounded border-2 border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-300">
-            <FaTwitter size={18} />
+          <a 
+            href="https://leetcode.com/u/nidheshsoni/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-10 h-10 flex justify-center items-center rounded border-2 border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-300"
+          >
+            <SiLeetcode size={18} />
           </a>
         </div>
 

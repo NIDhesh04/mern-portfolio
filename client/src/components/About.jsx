@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaMapMarkerAlt, FaUserGraduate, FaFilePdf, FaFileWord } from 'react-icons/fa';
+import myImage from '../assets/download (10).png';
 
 export default function About() {
   // Use the environment variable from Vite, defaulting to localhost if not found
@@ -31,7 +32,7 @@ export default function About() {
         >
           <div className="w-full max-w-[280px] aspect-square overflow-hidden border-4 border-black dark:border-white bg-white">
             <img 
-              src="https://via.placeholder.com/400x400/000000/FFFFFF?text=Nidhesh" 
+              src={myImage} 
               alt="Nidhesh Soni Profile" 
               className="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-500" 
             />

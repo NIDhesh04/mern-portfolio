@@ -77,7 +77,7 @@ export default function Contact() {
               <div className="w-12 h-12 flex justify-center items-center border-2 border-white dark:border-black rounded-none">
                 <FaEnvelope size={20} />
               </div>
-              <span className="font-bold tracking-wide text-lg">hello@nidhesh.com</span>
+              <span className="font-bold tracking-wide text-lg">nidheshsoni@gmail.com</span>
             </div>
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 flex justify-center items-center border-2 border-white dark:border-black rounded-none">

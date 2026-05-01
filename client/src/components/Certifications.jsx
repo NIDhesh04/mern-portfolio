@@ -1,64 +1,46 @@
 // client/src/components/Certifications.jsx
 import { motion } from 'framer-motion';
 import CertCard from './CertCard';
-import { 
-  SiGooglecloud, 
-  SiCoursera, 
-  SiMeta, 
-  SiJavascript 
-} from 'react-icons/si';
-// Add this line right below:
-import { FaLinkedin } from 'react-icons/fa';
+import { SiCoursera, SiLeetcode } from 'react-icons/si';
+
+// Import the custom LeetCode badge image
+import leetcodeBadgeImage from '../assets/leetcode.png';
+
 const certificationsData = [
   {
     id: 1,
-    title: 'Meta Full-Stack Engineer Professional Certificate',
-    issuer: 'Meta / Coursera',
-    date: 'Expected April 2026',
-    link: 'https://coursera.org/verify/example',
-    icon: SiMeta
+    title: 'Linear Algebra for Machine Learning and Data Science',
+    issuer: 'Coursera',
+    date: 'Recent',
+    link: 'https://coursera.org/share/9dcae4655a857e299e4f207deef079a1',
+    icon: SiCoursera
   },
   {
     id: 2,
-    title: 'Google Cloud Digital Leader',
-    issuer: 'Google Cloud',
-    date: 'Jan 2025',
-    link: 'https://google.com/verify/example',
-    icon: SiGooglecloud
-  },
-  {
-    id: 3,
-    title: 'Advanced JavaScript (ES6+)',
-    issuer: 'HackerRank',
-    date: 'Nov 2024',
-    link: 'https://hackerrank.com/certificates/example',
-    icon: SiJavascript
-  },
-  {
-    id: 4,
-    title: 'Project Management Foundations',
-    issuer: 'LinkedIn Learning',
-    date: 'Aug 2024',
-    link: 'https://linkedin.com/learning/verify/example',
-    icon: FaLinkedin
+    title: 'LeetCode 365 Days Badge',
+    issuer: 'LeetCode',
+    date: 'Continuous',
+    // We keep the original link here just as a reference, 
+    // but we will override it in the render mapping below.
+    link: 'https://leetcode.com/u/nidheshsoni/', 
+    icon: SiLeetcode,
+    image: leetcodeBadgeImage 
   }
 ];
 
 export default function Certifications() {
-  // Animation variants for the container (staggers the children)
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2, // Each card appears 0.2s after the previous one
+        staggerChildren: 0.2, 
       }
     }
   };
 
-  // Animation variants for individual cards
   const itemVariants = {
-    hidden: { opacity: 0, x: -30 }, // Slide in from the left
+    hidden: { opacity: 0, x: -30 }, 
     visible: { 
       opacity: 1, 
       x: 0, 
@@ -69,7 +51,7 @@ export default function Certifications() {
   return (
     <section id="certifications" className="py-24 px-4 md:px-8 max-w-5xl mx-auto font-sans">
       
-      {/* Section Header - Matching your Experience/Skills style */}
+      {/* Section Header */}
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -96,8 +78,11 @@ export default function Certifications() {
               title={cert.title}
               issuer={cert.issuer}
               date={cert.date}
-              link={cert.link}
+              // THE MAGIC TRICK: If cert.image exists, use it as the hyperlink. 
+              // Otherwise, use the standard web URL.
+              link={cert.image ? cert.image : cert.link} 
               icon={cert.icon}
+              image={cert.image} 
             />
           </motion.div>
         ))}
@@ -107,10 +92,10 @@ export default function Certifications() {
       <motion.p 
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-        className="mt-12 text-center text-gray-500 dark:text-gray-400 italic text-sm"
+        transition={{ delay: 0.8 }}
+        className="mt-12 text-center text-gray-500 dark:text-gray-400 font-bold uppercase tracking-widest text-xs"
       >
-        * Continuous learning in progress... Currently exploring Cloud Native Architectures.
+        * Continuous learning and daily problem-solving in progress.
       </motion.p>
 
     </section>

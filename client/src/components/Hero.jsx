@@ -1,7 +1,9 @@
 // client/src/components/Hero.jsx
 import { motion } from 'framer-motion';
-import { FaFacebookF, FaRedditAlien, FaTwitter, FaDiscord } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { SiLeetcode } from 'react-icons/si';
 import myImage from "../assets/Gemini_Generated_Image_ks87bqks87bqks87.svg";
+
 export default function Hero() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -18,9 +20,9 @@ export default function Hero() {
 
   return (
     <section 
-  id="hero" 
-  className="pt-28 min-h-[80vh] flex flex-col-reverse md:flex-row justify-between items-center px-4 md:px-8 max-w-7xl mx-auto font-sans text-black dark:text-white transition-colors duration-300"
->
+      id="hero" 
+      className="pt-28 min-h-[80vh] flex flex-col-reverse md:flex-row justify-between items-center px-4 md:px-8 max-w-7xl mx-auto font-sans text-black dark:text-white transition-colors duration-300"
+    >
       <motion.div 
         className="flex-1 max-w-2xl mt-12 md:mt-0"
         variants={containerVariants}
@@ -53,30 +55,40 @@ export default function Hero() {
         {/* Social Icons - Dynamic switching */}
         <motion.div variants={itemVariants} className="flex space-x-4">
           
-          {/* Active/Filled Icon */}
-          <a href="#" className="w-12 h-12 flex justify-center items-center rounded transition-colors duration-300 
+          {/* Active/Filled Icon - GitHub */}
+          <a 
+            href="https://github.com/NIDhesh04" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-12 h-12 flex justify-center items-center rounded transition-colors duration-300 
             border-2 border-black bg-black text-white hover:bg-gray-800 
-            dark:border-white dark:bg-white dark:text-black dark:hover:bg-gray-200">
-            <FaFacebookF size={20} />
+            dark:border-white dark:bg-white dark:text-black dark:hover:bg-gray-200"
+          >
+            <FaGithub size={22} />
           </a>
           
-          {/* Outline Icons */}
-          <a href="#" className="w-12 h-12 flex justify-center items-center rounded transition-colors duration-300 
+          {/* Outline Icon - LinkedIn */}
+          <a 
+            href="https://www.linkedin.com/in/nidhesh-soni-27b80622b/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-12 h-12 flex justify-center items-center rounded transition-colors duration-300 
             border-2 border-black text-black hover:bg-black hover:text-white 
-            dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black">
-            <FaRedditAlien size={22} />
+            dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black"
+          >
+            <FaLinkedinIn size={20} />
           </a>
           
-          <a href="#" className="w-12 h-12 flex justify-center items-center rounded transition-colors duration-300 
+          {/* Outline Icon - LeetCode */}
+          <a 
+            href="https://leetcode.com/u/nidheshsoni/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-12 h-12 flex justify-center items-center rounded transition-colors duration-300 
             border-2 border-black text-black hover:bg-black hover:text-white 
-            dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black">
-            <FaTwitter size={20} />
-          </a>
-          
-          <a href="#" className="w-12 h-12 flex justify-center items-center rounded transition-colors duration-300 
-            border-2 border-black text-black hover:bg-black hover:text-white 
-            dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black">
-            <FaDiscord size={22} />
+            dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black"
+          >
+            <SiLeetcode size={20} />
           </a>
 
         </motion.div>
@@ -88,7 +100,6 @@ export default function Hero() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.3 }}
       >
-        {/* Removed padding, borders, and shadows! Now it just tightly hugs your SVG */}
         <div className="w-full bg-white transition-colors duration-300 flex justify-center items-center">
           <img 
             src={myImage} 
